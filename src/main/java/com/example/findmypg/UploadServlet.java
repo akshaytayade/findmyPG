@@ -80,22 +80,22 @@ public class UploadServlet extends HttpServlet {
 
             Class.forName(DB_DRIVER);
             Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            PreparedStatement stmt = conn.prepareStatement("insert into property(pid,id,pname,ptype,details,price,address,college,imgfilename,status) values (?,?,?,?,?,?,?,?,?,?)");
-            stmt.setInt(1,1);//1 specifies the first parameter in the query
-            stmt.setInt(2,1);
-            stmt.setString(3,prop_name);
-            stmt.setString(4,room_type);
-            stmt.setString(5,selectedOptions_string);
-            stmt.setInt(6,price);
-            stmt.setString(7,prop_address);
-            stmt.setString(8, nearby_institute);
-            stmt.setString(9,imgName_string);
-            stmt.setInt(10,1);
+            PreparedStatement stmt = conn.prepareStatement("insert into property(pname,ptype,details,price,address,college,imgfilename,status) values (?,?,?,?,?,?,?,?)");
+            stmt.setString(1,prop_name);
+            stmt.setString(2,room_type);
+            stmt.setString(3,selectedOptions_string);
+            stmt.setInt(4,price);
+            stmt.setString(5,prop_address);
+            stmt.setString(6, nearby_institute);
+            stmt.setString(7,imgName_string);
+            stmt.setInt(8,1);
 
             //Executing the Query
             int rowsAffected = stmt.executeUpdate();
+            conn.close();
 
-            if (rowsAffected < 0){
+            //Validating if the query has been executed or not
+            if (rowsAffected > 0){
                 out.println(rowsAffected+" records inserted");
             }
             else {

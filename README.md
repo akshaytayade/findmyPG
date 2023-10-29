@@ -1,6 +1,6 @@
 # findmyPG
 
-Welcome to our Online PG Finding Website! This platform helps users find suitable Paying Guest accommodations easily. Whether you are a student looking for a PG, our website has you covered.
+Welcome to our Online PG Finding Website! This platform helps users find suitable Paying Guest accommodations easily. If you are a student looking for a PG, our website has you covered.
 
 ## Table of Contents
 - [Features](#features)
