@@ -38,11 +38,22 @@ public class SearchServlet extends HttpServlet {
 //            out.println(stmt);
             ResultSet rs = stmt.executeQuery();
 
+            out.println("[");
             while (rs.next()){
-                String prop_name_fetch = rs.getString("pname");
-                out.println(prop_name_fetch);
+                out.println("{");
+                out.println("\"id\":\"" + rs.getString("pid") + "\",");
+                out.println("\"name\":\"" + rs.getString("pname") + "\",");
+                out.println("\"type\":\"" + rs.getString("ptype") + "\",");
+                out.println("\"details\":\"" + rs.getString("details") + "\",");
+                out.println("\"price\":\"" + rs.getDouble("price") + "\"");
+                out.println("\"address\":\"" + rs.getString("address") + "\"");
+                out.println("\"college\":\"" + rs.getString("college") + "\"");
+                out.println("\"imgname\":\"" + rs.getString("imgfilename") + "\"");
+                out.println("},");
             }
+            out.println("]");
             conn.close();
+            response.sendRedirect("showProperty.jsp");
         } catch (ClassNotFoundException | SQLException e) {
             throw new RuntimeException(e);
         }

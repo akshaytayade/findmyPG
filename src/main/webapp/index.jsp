@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width " initial-scale=1.0>
-    <title>findmyPG</title>
+    <title>findmyPG | Login</title>
     <!-- Homepage link css -->
     <link rel="stylesheet" type="text/css" href="css/customer.css">
     <link rel="stylesheet" href="Design/boxicons-2.1.4/css/boxicons.min.css">
@@ -30,10 +30,10 @@
         <h1>LOGIN</h1>
         <p>LANDING PAGE</p>
     </div>
-    <form  class="form">
+    <form action="LoginServlet" class="form" method="post">
         <div class="animated-input">
-            <input type="text" placeholder="Username">
-            <input type="password" placeholder="Password">
+            <input type="text" placeholder="Username" name="username">
+            <input type="password" placeholder="Password" name="password">
         </div>
         <div class="check">
             <div>
@@ -43,8 +43,8 @@
             </div>
             <p class="forget"><a href="#">Forget Password ?</a></p>
         </div>
+        <button class="btn" type="submit">LOGIN</button>
     </form>
-    <button class="btn" type="submit">LOGIN</button>
     <p class="account"><a href="#">Create Account ?</a></p>
 </div>
 </body>
