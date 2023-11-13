@@ -77,7 +77,6 @@ public class SignUpServlet extends HttpServlet {
         }
     }
 
-
     private boolean isPasswordValid(String pass) {
         if (pass.length() < 8) {
             return false;
