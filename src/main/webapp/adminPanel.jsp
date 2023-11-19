@@ -38,7 +38,7 @@
         connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
 
         // Execute a query
-        String query = "SELECT * FROM property_bk";
+        String query = "SELECT * FROM property";
         statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
         resultSet = statement.executeQuery(query);
 %>
