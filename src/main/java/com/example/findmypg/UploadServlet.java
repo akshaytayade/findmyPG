@@ -5,15 +5,10 @@ import jakarta.servlet.http.*;
 import jakarta.servlet.annotation.*;
 import java.io.*;
 import java.nio.file.Paths;
-import java.sql.Array;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.util.*;
-import org.apache.commons.fileupload.*;
-import org.apache.commons.fileupload.disk.*;
-import org.apache.commons.fileupload.servlet.*;
-import org.apache.commons.io.output.*;
 import java.io.IOException;
 import java.util.stream.Collectors;
 import org.apache.commons.lang3.StringUtils;
@@ -24,7 +19,6 @@ public class UploadServlet extends HttpServlet {
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
     }
-
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException{
         PrintWriter out = response.getWriter();
 
@@ -36,6 +30,7 @@ public class UploadServlet extends HttpServlet {
         String [] selectedOptions = request.getParameterValues("amenities");
         String selectedOptions_string = String.join(",", selectedOptions);
         String room_type = request.getParameter("sharing_type");
+        String owner_name = request.getParameter("owner_name");
 
 //        out.println(Arrays.toString(selectedOptions));
 //        out.println(room_type);
@@ -80,7 +75,7 @@ public class UploadServlet extends HttpServlet {
 
             Class.forName(DB_DRIVER);
             Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            PreparedStatement stmt = conn.prepareStatement("insert into property(pname,ptype,details,price,address,college,imgfilename,status) values (?,?,?,?,?,?,?,?)");
+            PreparedStatement stmt = conn.prepareStatement("insert into property(pname,ptype,details,price,address,college,imgfilename,status,name) values (?,?,?,?,?,?,?,?,?)");
             stmt.setString(1,prop_name);
             stmt.setString(2,room_type);
             stmt.setString(3,selectedOptions_string);
@@ -89,6 +84,7 @@ public class UploadServlet extends HttpServlet {
             stmt.setString(6, nearby_institute);
             stmt.setString(7,imgName_string);
             stmt.setInt(8,1);
+            stmt.setString(9, owner_name);
 
             //Executing the Query
             int rowsAffected = stmt.executeUpdate();

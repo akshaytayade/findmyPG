@@ -36,6 +36,7 @@
         <br>
         <br>
         Upload Property images: <input type = "file" name = "files" accept="image/*"  multiple/>
+        Owner Name: <input type="text" name="owner_name">
 
 
         <input type = "submit" value = "Post Property" />
