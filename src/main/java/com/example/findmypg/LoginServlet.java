@@ -82,7 +82,8 @@ public class LoginServlet extends HttpServlet {
             }
             else {
                 if(user_role.equals("normal")){
-                    response.sendRedirect("showProperty.jsp");
+//                    response.sendRedirect("showProperty.jsp");
+                    response.sendRedirect("home.jsp");
                 } else if (user_role.equals("admin")) {
                     response.sendRedirect("adminPanel.jsp");
                 }

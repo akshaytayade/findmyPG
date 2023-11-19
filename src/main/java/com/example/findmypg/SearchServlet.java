@@ -36,6 +36,8 @@ public class SearchServlet extends HttpServlet {
             PreparedStatement stmt = conn.prepareStatement("select * from property where LOWER(college) like ?");
             stmt.setString(1,"%" + search_query + "%");
 //            out.println(stmt);
+            ServletContext servletcontext = getServletContext();
+            servletcontext.setAttribute("search_url", stmt);
             ResultSet rs = stmt.executeQuery();
 
             out.println("[");
