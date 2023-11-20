@@ -51,7 +51,7 @@
 <%
     ServletContext sc = request.getServletContext();
 
-    String search_keyword = request.getSession().getAttribute("search_keyword").toString();
+//    String search_keyword = request.getSession().getAttribute("search_keyword").toString();
     Connection connection = null;
     Statement statement = null;
     ResultSet resultSet = null;
@@ -79,7 +79,7 @@
     while (resultSet.next()) {
 %>
 <div class="property">
-    <h2><%= search_keyword%></h2>
+<%--    <h2><%= search_keyword%></h2>--%>
     <h2><%= resultSet.getString("pname") %></h2>
     <p><strong>Address:</strong> <%= resultSet.getString("address") %></p>
     <p><strong>Sharing Type:</strong> <%= resultSet.getString("ptype") %></p>

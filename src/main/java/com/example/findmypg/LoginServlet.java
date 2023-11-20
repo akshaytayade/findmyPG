@@ -80,9 +80,6 @@ public class LoginServlet extends HttpServlet {
                     response.sendRedirect("loginError.jsp");
                 }
 
-                if (isLoggedIn.equals("Y")) {
-                    System.out.println("User is already logged in");
-                } else {
                     if (user_role.equals("normal")) {
                         response.sendRedirect("home.jsp");
                     } else if (user_role.equals("admin")) {
@@ -90,10 +87,7 @@ public class LoginServlet extends HttpServlet {
                     } else {
                         response.sendRedirect("ownerPanel.jsp");
                     }
-                }
-        } catch (SQLException e) {
-            throw new RuntimeException(e);
-        } catch (ClassNotFoundException e) {
+        } catch (SQLException | ClassNotFoundException e) {
             throw new RuntimeException(e);
         }
     }
