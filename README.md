@@ -53,7 +53,7 @@ CREATE TABLE `property` (
   `path` varchar(4000) DEFAULT NULL,
   `status` int DEFAULT NULL,
   PRIMARY KEY (`pid`)
-) 
+); 
 
 CREATE TABLE `user_master` (
   `name` varchar(100) DEFAULT NULL,
@@ -66,6 +66,6 @@ CREATE TABLE `user_master` (
   `user_role` varchar(100) DEFAULT 'normal',
   `login_flag` varchar(1) DEFAULT 'N',
   PRIMARY KEY (`id`)
-) 
+); 
 ```
 
