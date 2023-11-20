@@ -11,7 +11,7 @@
   <component name="ChangeListManager">
     <list default="true" id="ffe1fbf6-3b36-4657-ae8d-6a941c954685" name="Changes" comment="more func added">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/LoginServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -170,7 +170,7 @@
       <workItem from="1698846568542" duration="12404000" />
       <workItem from="1699257059352" duration="1439000" />
       <workItem from="1699904640102" duration="1750000" />
-      <workItem from="1700371340247" duration="27256000" />
+      <workItem from="1700371340247" duration="28743000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
