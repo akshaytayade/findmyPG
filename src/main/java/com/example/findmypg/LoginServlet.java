@@ -6,10 +6,7 @@ import jakarta.servlet.annotation.*;
 
 import java.io.IOException;
 import java.io.PrintWriter;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
+import java.sql.*;
 
 @WebServlet(name = "LoginServlet", value = "/LoginServlet")
 public class LoginServlet extends HttpServlet {
@@ -39,60 +36,59 @@ public class LoginServlet extends HttpServlet {
             PreparedStatement stmt = conn.prepareStatement("select * from user_master where name = ? and pass = ?");
             stmt.setString(1, username);
             stmt.setString(2, password);
-            out.println(stmt);
+//            out.println(stmt);
+            String isLoggedIn = null;
+            String user_role = null;
             ResultSet rs = stmt.executeQuery();
 
             //Updating the login_flag to 'Y'
-            if (!rs.wasNull()){
                 //Creating a session
                 HttpSession session = request.getSession();
                 session.setAttribute("name", username);
                 String session_id = session.getId();
 
-                PreparedStatement stmt2 = conn.prepareStatement("update user_master set login_flag = ? and session_id = ? where name = ?");
-                stmt2.setString(1,"Y");
-                stmt2.setString(2,session_id);
-                stmt2.setString(3,username);
-
-                int rowsAffected = stmt2.executeUpdate();
-                if (rowsAffected > 0){
-                    out.println("Login flag updated successfully for the user!");
+                while (rs.next()) {
+                    isLoggedIn = rs.getString("login_flag");
+                    user_role = rs.getString("user_role");
                 }
-                else {
-                    out.println("Something went wrong!");
+                out.println(isLoggedIn + user_role);
+
+//                PreparedStatement stmt2 = conn.prepareStatement("update user_master set login_flag = ? and session_id = ? where name = ?");
+//                stmt2.setString(1, "Y");
+//                stmt2.setString(2, session_id);
+//                stmt2.setString(3, username);
+//
+//                ResultSet rs1 = stmt2.executeQuery();
+//                if (rowsAffected > 0){
+//                    System.out.println("Login flag updated successfully for the user!");
+//                }
+//                else {
+//                    System.out.println("Something went wrong!");
+//                }
+//            }
+//                String isLoggedIn = null;
+//                String user_role = null;
+//                while (rs.next()) {
+//                    isLoggedIn = rs.getString("login_flag");
+//                    user_role = rs.getString("user_role");
+//                }
+
+                conn.close();
+
+                //Validation for Login
+                if (isLoggedIn.isEmpty() || user_role.isEmpty()) {
+                    response.sendRedirect("loginError.jsp");
                 }
-            }
 
-            String isLoggedIn = null;
-            String user_role = null;
-            while (rs.next()) {
-                isLoggedIn = rs.getString("login_flag");
-                user_role = rs.getString("user_role");
-            }
-
-            conn.close();
-
-            //Validation for Login
-            if (isLoggedIn.isEmpty() || user_role.isEmpty()){
-                response.sendRedirect("loginError.jsp");
-            }
-
-            if (isLoggedIn.equals("Y")){
-                out.println("User is already logged in");
-            }
-            else {
-                if(user_role.equals("normal")){
-//                    response.sendRedirect("showProperty.jsp");
-                    response.sendRedirect("home.jsp");
-                } else if (user_role.equals("admin")) {
-                    response.sendRedirect("adminPanel.jsp");
-                }
-                else{
-                    response.sendRedirect("ownerPanel.jsp");
-                }
-            }
-        } catch (Exception e) {
-            System.out.println(e);
+                    if (user_role.equals("normal")) {
+                        response.sendRedirect("home.jsp");
+                    } else if (user_role.equals("admin")) {
+                        response.sendRedirect("adminPanel.jsp");
+                    } else {
+                        response.sendRedirect("ownerPanel.jsp");
+                    }
+        } catch (SQLException | ClassNotFoundException e) {
+            throw new RuntimeException(e);
         }
     }
 }

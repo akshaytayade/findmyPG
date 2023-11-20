@@ -29,6 +29,11 @@ public class UpdateProperty extends HttpServlet {
         String status = request.getParameter("status");
         String name = request.getParameter("name");
 
+        //Checking if any value is null
+        if (pname.equals("null") | address.equals("null") | ptype.equals("null") | details.equals("null") | college.equals("null") | name.equals("null")){
+            out.println("Values cannot be null... Try again...");
+        }
+
         //DB Connection
         ServletContext sc = request.getServletContext();
         String DB_DRIVER = sc.getInitParameter("DB_DRIVER");
@@ -49,12 +54,15 @@ public class UpdateProperty extends HttpServlet {
             stmt.setString(7, name);
             stmt.setInt(8, pid);
 
-//            out.println(stmt);
-//            ResultSet rs = stmt.executeQuery();
-
-//            while (rs.next()){
-//
-//            }
+            int rowsAffected = stmt.executeUpdate();
+            conn.close();
+            if (rowsAffected > 0){
+                out.println("Record Updated Successfully");
+                response.sendRedirect("adminPanel.jsp");
+            }
+            else {
+                out.println("Something went wrong... "+ stmt);
+            }
         }
         catch (Exception e){
             System.out.println(e);

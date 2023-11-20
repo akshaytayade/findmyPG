@@ -10,22 +10,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffe1fbf6-3b36-4657-ae8d-6a941c954685" name="Changes" comment="more func added">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/DeleteProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/LogoutServlet.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/UpdateProperty.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/script.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/updateProperty.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/akshay/myimg.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/akshay/myimg2.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/akshay/myimg3.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/LoginServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/SearchServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/SearchServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/UploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/UploadServlet.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProperty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProperty.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/adminPanel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/adminPanel.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/showProperty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showProperty.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -184,7 +170,7 @@
       <workItem from="1698846568542" duration="12404000" />
       <workItem from="1699257059352" duration="1439000" />
       <workItem from="1699904640102" duration="1750000" />
-      <workItem from="1700371340247" duration="21601000" />
+      <workItem from="1700371340247" duration="28743000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />

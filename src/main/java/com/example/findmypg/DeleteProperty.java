@@ -32,7 +32,7 @@ public class DeleteProperty extends HttpServlet {
         try {
             Class.forName(DB_DRIVER);
             Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            PreparedStatement stmt = conn.prepareStatement("delete from property_bk where pid = ?");
+            PreparedStatement stmt = conn.prepareStatement("delete from property where pid = ?");
             stmt.setInt(1, pid);
 
             int rowsAffected = stmt.executeUpdate();

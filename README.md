@@ -29,38 +29,43 @@ Welcome to our Online PG Finding Website! This platform helps users find suitabl
 - Admin panel for managing listings and users.
 - Responsive design for a seamless user experience on all devices.
 
-[//]: # (## Demo)
+## Database Script
+```sql
+CREATE DATABASE findmypg;
 
-[//]: # ()
-[//]: # (You can explore our website by visiting [Demo PG Finding Website]&#40;https://your-website-url.com&#41;.)
+USE findmypg;
 
-[//]: # ()
-[//]: # (## Getting Started)
+CREATE TABLE `property` (
+  `pid` int NOT NULL AUTO_INCREMENT,
+  `pdate` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
+  `name` varchar(50) DEFAULT NULL,
+  `pname` varchar(50) DEFAULT NULL,
+  `ptype` varchar(50) DEFAULT NULL,
+  `details` text,
+  `price` double DEFAULT NULL,
+  `contact` varchar(10) DEFAULT NULL,
+  `cityname` varchar(50) DEFAULT NULL,
+  `pincode` varchar(6) DEFAULT NULL,
+  `address` varchar(250) DEFAULT NULL,
+  `location` text,
+  `college` varchar(100) DEFAULT NULL,
+  `imgfilename` varchar(255) DEFAULT NULL,
+  `path` varchar(4000) DEFAULT NULL,
+  `status` int DEFAULT NULL,
+  PRIMARY KEY (`pid`)
+) 
 
-[//]: # ()
-[//]: # (### Prerequisites)
+CREATE TABLE `user_master` (
+  `name` varchar(100) DEFAULT NULL,
+  `pass` varchar(100) DEFAULT NULL,
+  `contact` int DEFAULT NULL,
+  `id` int NOT NULL AUTO_INCREMENT,
+  `session_id` varchar(100) DEFAULT NULL,
+  `user_email` varchar(100) DEFAULT NULL,
+  `reg_time` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
+  `user_role` varchar(100) DEFAULT 'normal',
+  `login_flag` varchar(1) DEFAULT 'N',
+  PRIMARY KEY (`id`)
+) 
+```
 
-[//]: # ()
-[//]: # (Before you begin, ensure you have met the following requirements:)
-
-[//]: # ()
-[//]: # (- Web server &#40;e.g., Apache&#41; or a hosting service.)
-
-[//]: # (- MySQL or other compatible database server.)
-
-[//]: # (- PHP and a framework &#40;if applicable&#41;.)
-
-[//]: # (- Node.js and npm &#40;if you're using JavaScript/Node.js&#41;.)
-
-[//]: # ()
-[//]: # (### Installation)
-
-[//]: # ()
-[//]: # (1. Clone the repository:)
-
-[//]: # ()
-[//]: # (   ```bash)
-
-[//]: # (   git clone https://github.com/your-username/pg-finding-website.git)
-
-[//]: # (   cd pg-finding-website)

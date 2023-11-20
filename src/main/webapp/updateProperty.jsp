@@ -79,7 +79,6 @@
         <input type="text" id="status" name="status" value="<%= resultSet.getString("status") %>">
         <label for="name">Owner Name:</label>
         <input type="text" id="name" name="name" value="<%= resultSet.getString("name") %>">
-        <!-- Add more input fields for additional columns -->
 
         <button type="submit">Update</button>
     </form>
