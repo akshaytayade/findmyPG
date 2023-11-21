@@ -10,13 +10,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffe1fbf6-3b36-4657-ae8d-6a941c954685" name="Changes" comment="more func added">
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/viewDetails.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/SendEmailServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/UploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/UploadServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/addProperty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProperty.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/showProperty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showProperty.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ownerPanel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ownerPanel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/viewDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewDetails.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,8 +35,8 @@
         <option value="CSS File" />
         <option value="Class" />
         <option value="JavaScript File" />
-        <option value="Servlet" />
         <option value="Jsp File" />
+        <option value="Servlet" />
       </list>
     </option>
   </component>
@@ -175,7 +176,7 @@
       <workItem from="1698846568542" duration="12404000" />
       <workItem from="1699257059352" duration="1439000" />
       <workItem from="1699904640102" duration="1750000" />
-      <workItem from="1700371340247" duration="44095000" />
+      <workItem from="1700371340247" duration="55647000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />

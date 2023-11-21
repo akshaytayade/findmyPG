@@ -67,6 +67,9 @@
     <p><strong>Pincode:</strong> <%= resultSet.getString("pincode") %></p>
     <p><strong>Owner Name:</strong> <%= resultSet.getString("name") %></p>
     <p><strong>Owner Contact:</strong> <%= resultSet.getString("contact") %></p>
+    <form action="SendEmailServlet" method="post">
+        <input type="submit" value="Send Details via Email">
+    </form>
 </div>
 
 <%

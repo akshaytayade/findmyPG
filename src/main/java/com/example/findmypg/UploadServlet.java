@@ -94,13 +94,20 @@ public class UploadServlet extends HttpServlet {
             int rowsAffected = stmt.executeUpdate();
             conn.close();
 
+            //Sending data to ownerPanel.jsp
+            String destination = "ownerPanel.jsp";
+            RequestDispatcher requestDispatcher = request.getRequestDispatcher(destination);
+            request.setAttribute("owner_name", owner_name);
+            requestDispatcher.forward(request, response);
+
             //Validating if the query has been executed or not
             if (rowsAffected > 0){
-                out.println(rowsAffected+" records inserted");
+                System.out.println(rowsAffected+" records inserted");
+
             }
             else {
                 out.println(stmt);
-                out.println("No records inserted");
+                System.out.println("No records inserted");
             }
         } catch (Exception e) {
             System.out.println(e);
