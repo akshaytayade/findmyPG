@@ -19,4 +19,16 @@
         <param-name>DB_PASS</param-name>
         <param-value>root1234</param-value>
     </context-param>
+    <context-param>
+        <param-name>FROM_EMAIL</param-name>
+        <param-value>findmypgdetails@gmail.com</param-value>
+    </context-param>
+    <context-param>
+        <param-name>EMAIL_PASSWORD</param-name>
+        <param-value>fton tjuf zwos xgmy</param-value>
+    </context-param>
+    <context-param>
+        <param-name>EMAIL_SMTP</param-name>
+        <param-value>smtp.gmail.com</param-value>
+    </context-param>
 </web-app>
