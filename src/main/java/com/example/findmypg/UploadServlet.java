@@ -31,6 +31,8 @@ public class UploadServlet extends HttpServlet {
         String selectedOptions_string = String.join(",", selectedOptions);
         String room_type = request.getParameter("sharing_type");
         String owner_name = request.getParameter("owner_name");
+        String owner_contact = request.getParameter("owner_contact");
+        String pincode = request.getParameter("pincode");
 
 //        out.println(Arrays.toString(selectedOptions));
 //        out.println(room_type);
@@ -75,7 +77,7 @@ public class UploadServlet extends HttpServlet {
 
             Class.forName(DB_DRIVER);
             Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            PreparedStatement stmt = conn.prepareStatement("insert into property(pname,ptype,details,price,address,college,imgfilename,status,name) values (?,?,?,?,?,?,?,?,?)");
+            PreparedStatement stmt = conn.prepareStatement("insert into property(pname,ptype,details,price,address,college,imgfilename,status,name,contact,pincode) values (?,?,?,?,?,?,?,?,?,?,?)");
             stmt.setString(1,prop_name);
             stmt.setString(2,room_type);
             stmt.setString(3,selectedOptions_string);
@@ -85,6 +87,8 @@ public class UploadServlet extends HttpServlet {
             stmt.setString(7,imgName_string);
             stmt.setInt(8,1);
             stmt.setString(9, owner_name);
+            stmt.setString(10,owner_contact);
+            stmt.setString(11,pincode);
 
             //Executing the Query
             int rowsAffected = stmt.executeUpdate();

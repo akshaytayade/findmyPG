@@ -86,13 +86,18 @@
 <%
     int carouselIndex = 0; // Initialize carousel index
     while (resultSet.next()) {
+        int propertyId = resultSet.getInt("pid");
 %>
 <div class="property">
     <h2><%= resultSet.getString("pname") %></h2>
-    <p><strong>Address:</strong> <%= resultSet.getString("address") %></p>
+<%--    <p><strong>Address:</strong> <%= resultSet.getString("address") %></p>--%>
     <p><strong>Sharing Type:</strong> <%= resultSet.getString("ptype") %></p>
     <p><strong>Facilities Provided:</strong> <%= resultSet.getString("details") %></p>
     <p><strong>Nearby College:</strong> <%= resultSet.getString("college") %></p>
+    <form action="viewDetails.jsp" method="post">
+        <input type="hidden" name="propertyId" value="<%= propertyId %>">
+        <input type="submit" value="View Details">
+    </form>
 
     <div class="carousel-container">
         <div class="carousel">

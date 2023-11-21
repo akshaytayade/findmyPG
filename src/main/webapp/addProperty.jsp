@@ -11,6 +11,7 @@
         Property Name: <input type="text" name="prop_name" required>
         Property Price: (Per Month) <input type="text" name="prop_price" required>
         Property Address: <input type="text" name="prop_address" required>
+        Pincode: <input type="text" name="pincode">
         Nearby Institute: <input type="text" name="nearby_institute">
         </fieldset>
         <%--Amenities Provided--%>
@@ -37,6 +38,7 @@
         <br>
         Upload Property images: <input type = "file" name = "files" accept="image/*"  multiple/>
         Owner Name: <input type="text" name="owner_name">
+        Owner Contact: <input type="text" name="owner_contact">
 
 
         <input type = "submit" value = "Post Property" />
