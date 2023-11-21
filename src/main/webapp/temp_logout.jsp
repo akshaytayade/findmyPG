@@ -11,6 +11,7 @@
     <title>temp page</title>
 </head>
 <body>
+<% %>
     <form action="LogoutServlet" method="post">
         <input type="submit">
     </form>

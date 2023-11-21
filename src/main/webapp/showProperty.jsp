@@ -51,10 +51,12 @@
 <%
     ServletContext sc = request.getServletContext();
 
-//    String search_keyword = request.getSession().getAttribute("search_keyword").toString();
+    String search_keyword_attribute = request.getAttribute("search_keyword").toString().trim();
+    System.out.println("Search Keyword: " + search_keyword_attribute);
     Connection connection = null;
-    Statement statement = null;
+    PreparedStatement preparedStatement = null;
     ResultSet resultSet = null;
+    String query;
 
     try {
         String DB_DRIVER = sc.getInitParameter("DB_DRIVER");
@@ -67,9 +69,16 @@
         connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
 
         // Execute a query
-        String query = "SELECT * FROM property where status = 1";
-        statement = connection.createStatement(ResultSet.TYPE_SCROLL_INSENSITIVE, ResultSet.CONCUR_READ_ONLY);
-        resultSet = statement.executeQuery(query);
+        if (search_keyword_attribute.isEmpty()){
+            query = "SELECT * FROM property where status = 1";
+            preparedStatement = connection.prepareStatement(query);
+        } else {
+            query = "SELECT * FROM property where status = 1 and lower(college) LIKE ?";
+            preparedStatement = connection.prepareStatement(query);
+            preparedStatement.setString(1, "%" + search_keyword_attribute.toLowerCase() + "%");
+        }
+
+        resultSet = preparedStatement.executeQuery();
 %>
 
 <h1>Image Carousel</h1>
@@ -77,25 +86,27 @@
 <%
     int carouselIndex = 0; // Initialize carousel index
     while (resultSet.next()) {
+        int propertyId = resultSet.getInt("pid");
 %>
 <div class="property">
-<%--    <h2><%= search_keyword%></h2>--%>
     <h2><%= resultSet.getString("pname") %></h2>
-    <p><strong>Address:</strong> <%= resultSet.getString("address") %></p>
+<%--    <p><strong>Address:</strong> <%= resultSet.getString("address") %></p>--%>
     <p><strong>Sharing Type:</strong> <%= resultSet.getString("ptype") %></p>
     <p><strong>Facilities Provided:</strong> <%= resultSet.getString("details") %></p>
     <p><strong>Nearby College:</strong> <%= resultSet.getString("college") %></p>
-<%--    <p><strong>Is Available?</strong> <%= resultSet.getString("status") %></p>--%>
+    <form action="viewDetails.jsp" method="post">
+        <input type="hidden" name="propertyId" value="<%= propertyId %>">
+        <input type="submit" value="View Details">
+    </form>
 
     <div class="carousel-container">
-        <%--        <div class="carousel" data-current-slide="0"><!-- Add data-current-slide attribute -->--%>
         <div class="carousel">
             <%
                 // Split the comma-separated image URLs
                 String[] imageUrls = resultSet.getString("imgfilename").split(",");
                 for (String imageUrl : imageUrls) {
             %>
-            <img src="<%= IMG_PATH+resultSet.getString("pname")+"/"+ imageUrl.trim() %>" alt="Image" width="50px">
+            <img src="<%= IMG_PATH+resultSet.getString("pname")+"/"+ imageUrl.trim() %>" alt="Image" width="100px">
             <% } %>
         </div>
         <div class="prev" onclick="changeSlide(this.parentElement, -1)">&#10094;</div>
@@ -119,9 +130,9 @@
                 e.printStackTrace();
             }
         }
-        if (statement != null) {
+        if (preparedStatement != null) {
             try {
-                statement.close();
+                preparedStatement.close();
             } catch (SQLException e) {
                 e.printStackTrace();
             }

@@ -22,9 +22,11 @@ public class SearchServlet extends HttpServlet {
         String search_keyword = request.getParameter("search_query");
         search_keyword = search_keyword.trim().toLowerCase();
 
-        HttpSession session = request.getSession(false);
-        session.setAttribute(search_keyword, search_keyword);
-        request.getRequestDispatcher("/showProperty.jsp").forward(request, response);
+        //Sending data to showProperty.jsp
+        String destination = "showProperty.jsp";
+        RequestDispatcher requestDispatcher = request.getRequestDispatcher(destination);
+        request.setAttribute("search_keyword", search_keyword);
+        requestDispatcher.forward(request, response);
 
 //        //DB Connection
 //        ServletContext sc = request.getServletContext();
