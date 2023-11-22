@@ -68,10 +68,10 @@
     <p><strong>Owner Name:</strong> <%= resultSet.getString("name") %></p>
     <p><strong>Owner Contact:</strong> <%= resultSet.getString("contact") %></p>
     <form action="SendEmailServlet" method="post">
-        <input type="text" name="pname" value="<%= resultSet.getString("pname") %>">
-        <input type="text" name="owner_name" value="<%= resultSet.getString("name") %>">
-        <input type="text" name="owner_contact" value="<%= resultSet.getString("contact") %>">
-        <input type="text" name="address" value="<%= resultSet.getString("address") %>">
+        <input type="hidden" name="pname" value="<%= resultSet.getString("pname") %>">
+        <input type="hidden" name="owner_name" value="<%= resultSet.getString("name") %>">
+        <input type="hidden" name="owner_contact" value="<%= resultSet.getString("contact") %>">
+        <input type="hidden" name="address" value="<%= resultSet.getString("address") %>">
         <input type="email" name="user_email">
         <input type="submit" value="Send Details via Email">
     </form>
