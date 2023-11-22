@@ -27,7 +27,20 @@ public class SendEmailServlet extends HttpServlet {
         final String password = sc.getInitParameter("EMAIL_PASSWORD");
         String host = sc.getInitParameter("EMAIL_SMTP");
 
-        String to = "iamakshay938@gmail.com";
+        String to = request.getParameter("user_email");
+
+        String pname = request.getParameter("pname");
+        System.out.println(pname);
+
+        String address = request.getParameter("address");
+        System.out.println(address);
+
+        String owner_name = request.getParameter("name");
+        System.out.println(owner_name);
+
+        String owner_contact = request.getParameter("owner_contact");
+        System.out.println(owner_contact);
+//        String to = "iamakshay938@gmail.com";
 
         //configure Mailtrap's SMTP server details
         Properties props = new Properties();
@@ -48,10 +61,11 @@ public class SendEmailServlet extends HttpServlet {
             message.setFrom(new InternetAddress(from));
             message.setRecipients(Message.RecipientType.TO,
                     InternetAddress.parse(to));
-            message.setSubject("findmyPG | Property Details for: ");
-            message.setContent("Just discovered that Jakarta Mail is fun and easy to use", "text/html");
+            message.setSubject("findmyPG | Property Details for: " + pname);
+            message.setContent("Owner Name is: " + owner_name + "\n" +"Owner Contact is: " + owner_contact + "\n"+ "Address of Property is: " + address, "text/html");
             Transport.send(message);
             System.out.println("Email Message Sent Successfully");
+            response.sendRedirect("home.jsp");
         } catch (MessagingException e) {
             throw new RuntimeException(e);
         }
