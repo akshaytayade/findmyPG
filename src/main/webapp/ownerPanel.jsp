@@ -6,52 +6,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Owner Panel | findmyPG</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        .property {
-            margin-bottom: 30px;
-        }
-        .carousel-container {
-            position: relative;
-        }
-        .carousel {
-            display: flex;
-            overflow: hidden;
-        }
-        .carousel img {
-            width: 100%;
-            height: auto;
-            transition: transform 0.5s ease-in-out;
-        }
-        .prev, .next {
-            position: absolute;
-            top: 50%;
-            transform: translateY(-50%);
-            font-size: 20px;
-            cursor: pointer;
-        }
-        .prev {
-            left: 10px;
-        }
-        .next {
-            right: 10px;
-        }
-        .carousel-container.single-image .carousel img {
-            max-width: 50%; /* Adjust the width as needed for a single image */
-        }
-    </style>
+    <title>Owner Pannel | findmyPG</title>
+
+    <!-- Homepage link css -->
+    <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/ownerPanel.css">
+    <link rel="stylesheet" href="/Design/boxicons-2.1.4/css/boxicons.min.css">
+    <link rel="preconnect" href="/Design/fonts/Poppins-Bold.ttf">
+    <link rel="preconnect" href="/Design/fonts/Poppins-SemiBold.ttf">
     <script src="script.js"></script>
 </head>
 <body>
+<header>
+    <a href="#" class="logo">findmy<span class="span">PG</span></a>
+    <ul class="navlist">
+        <li><a href="main.jsp">Home</a></li>
 
+        <li><a href="signup.jsp">Owner Panel</a></li>
+        <li><a href="addProperty.jsp" class="active">Add Property</a></li>
+        <!-- <li><a href="/html/admin.html">Admin Login</a></li>-->
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="main.jsp">Logout</a></li>
+    </ul>
+</header>
 <%
     ServletContext sc = request.getServletContext();
 
-    String owner_name = request.getAttribute("owner_name").toString().trim();
+    String owner_name = request.getAttribute("username").toString().trim();
     System.out.println("Owner Name: " + owner_name);
     Connection connection = null;
     PreparedStatement preparedStatement = null;
@@ -81,44 +62,41 @@
         resultSet = preparedStatement.executeQuery();
 %>
 
-<h1>My Listings</h1>
-
-<%
-    int carouselIndex = 0; // Initialize carousel index
-    while (resultSet.next()) {
-        int propertyId = resultSet.getInt("pid");
-%>
-<div class="property">
-    <h2><%= resultSet.getString("pname") %></h2>
-    <%--    <p><strong>Address:</strong> <%= resultSet.getString("address") %></p>--%>
-    <p><strong>Sharing Type:</strong> <%= resultSet.getString("ptype") %></p>
-    <p><strong>Facilities Provided:</strong> <%= resultSet.getString("details") %></p>
-    <p><strong>Nearby College:</strong> <%= resultSet.getString("college") %></p>
-    <form action="viewDetails.jsp" method="post">
-        <input type="hidden" name="propertyId" value="<%= propertyId %>">
-        <input type="submit" value="View Details">
-    </form>
-
-    <div class="carousel-container">
-        <div class="carousel">
-            <%
-                // Split the comma-separated image URLs
-                String[] imageUrls = resultSet.getString("imgfilename").split(",");
-                for (String imageUrl : imageUrls) {
-            %>
-            <img src="<%= IMG_PATH+resultSet.getString("pname")+"/"+ imageUrl.trim() %>" alt="Image" width="100px">
-            <% } %>
-        </div>
-        <div class="prev" onclick="changeSlide(this.parentElement, -1)">&#10094;</div>
-        <div class="next" onclick="changeSlide(this.parentElement, 1)">&#10095;</div>
-    </div>
+<div class="box">
 </div>
-<%
-        carouselIndex++;
+<main class="main">
+        <%
+        int carouselIndex = 0; // Initialize carousel index
+        while (resultSet.next()) {
+            int propertyId = resultSet.getInt("pid");
+    %>
+    <div class="card">
+        <%--    <h2>class="img"alt="Image" width="50px"<%= search_keyword%></h2>--%>
+        <div class="caption">
+            <!-- <p class="rate">
+                 <box-icon name='star' ></box-icon>
+                 <box-icon name='star' ></box-icon>
+                 <box-icon name='star' ></box-icon>
+                 <box-icon name='star' ></box-icon>
+                 <box-icon type='solid' name='star'></box-icon>
+
+             </p>-->
+            <p class="price"><box-icon class="money"name='money-withdraw'></box-icon> <%= resultSet.getString("price") %></p>
+            <p class="slish">|</p>
+            <h2 class="name1"><%= resultSet.getString("pname") %></h2>
+            <h4 class="addr"><box-icon name='location-plus'></box-icon> <%= resultSet.getString("address") %></h4>
+            <h4 class="sharing"><box-icon name='share'></box-icon> Sharing Type :<span class="color"> <%= resultSet.getString("ptype") %></span></h4>
+            <h4 class="Facilit"><box-icon name='building-house' ></box-icon> Facilities Provided :<span class="color"><%= resultSet.getString("details") %></span></h4>
+            <h4 class="clg"><box-icon type='solid' name='map-pin'></box-icon> Nearby College :<span class="color"> <%= resultSet.getString("college") %></span></h4>
+
+        </div>
+    </div>
+        <%
+      carouselIndex++;
     }
 %>
 
-<%
+        <%
     } catch (Exception e) {
         e.printStackTrace();
     } finally {

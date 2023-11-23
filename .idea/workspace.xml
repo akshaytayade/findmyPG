@@ -10,8 +10,94 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ffe1fbf6-3b36-4657-ae8d-6a941c954685" name="Changes" comment="more func added">
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/about_us.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/9d2b426c-63e3-4868-9d20-7916a4ed2f92.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/about1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/about2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/about3.jpeg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/addProperty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/adminPanel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/b3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/b4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/b4.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bg1.svg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/bg2.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/hero_bg_1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/hostel-room1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/login.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/main.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/ownerPanel.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/px.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/pxfuel.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/pxfuel_1.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/rocket.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/showProperty.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/signup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/singup.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/slide-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/slide-2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/slide-3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/slide-about-1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/css/viewDetails.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/main.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/BVP Hostel/img15.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/BVP Hostel/img16.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/BVP Hostel/img17.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/BVP Hostel/img18.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/COEP Hostel/img10.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/COEP Hostel/img11.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/COEP Hostel/img12.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/COEP Hostel/img13.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/Gargi/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/Gargi/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/Gargi/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/Gargi/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/MIT Hostel/img1.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/MIT Hostel/img2.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/MIT Hostel/img3.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/MIT Hostel/img4.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/PVJ Hostel/img6.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/PVJ Hostel/img7.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/PVJ Hostel/img8.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/PVJ Hostel/img9.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources.local.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/7f4710b5-ea2b-4437-a336-c0117892aacb.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/7f4710b5-ea2b-4437-a336-c0117892aacb.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/LoginServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/LoginServlet.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/SendEmailServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/SendEmailServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/SignUpServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/SignUpServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/example/findmypg/UploadServlet.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/example/findmypg/UploadServlet.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Design/boxicons-2.1.4/LICENSE.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Design/boxicons-2.1.4/LICENSE.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Design/boxicons-2.1.4/css/animations.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Design/boxicons-2.1.4/css/animations.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Design/boxicons-2.1.4/css/transformations.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Design/boxicons-2.1.4/css/transformations.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Design/boxicons-2.1.4/svg/regular/bx-paper-plane.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Design/boxicons-2.1.4/svg/regular/bx-paper-plane.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Design/fonts/OFL.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Design/fonts/OFL.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/about_us.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/about_us.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/addProperty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/addProperty.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/about_us.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/about_us.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/css/customer.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/home.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/image/bg1.svg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/image/bg1.svg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/loginError.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/loginError.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/ownerPanel.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/ownerPanel.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/showProperty.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/showProperty.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/signup.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/signup.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/akshay/myimg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/akshay/myimg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/akshay/myimg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/gg123/city.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/hello/city.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/hello/demo-image.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/myProp/myimg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/myProp/myimg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/myProp/myimg3.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/myProp2/myimg.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/myProp2/myimg2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/uploaded_prop_images/myProp2/myimg3.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/viewDetails.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/viewDetails.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,8 +116,9 @@
         <option value="CSS File" />
         <option value="Class" />
         <option value="JavaScript File" />
-        <option value="Jsp File" />
         <option value="Servlet" />
+        <option value="HTML File" />
+        <option value="Jsp File" />
       </list>
     </option>
   </component>
@@ -84,12 +171,13 @@
   <component name="PropertiesComponent"><![CDATA[{
   "keyToString": {
     "ASKED_ADD_EXTERNAL_FILES": "true",
+    "DefaultHtmlFileTemplate": "HTML File",
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
     "WebServerToolWindowFactoryState": "false",
     "git-widget-placeholder": "staging",
-    "last_opened_file_path": "/Users/akshaytayade/IdeaProjects/findmyPG/src/main/webapp/css",
+    "last_opened_file_path": "/Users/akshaytayade/IdeaProjects/findmyPG/src/main/webapp/image",
     "list.type.of.created.stylesheet": "CSS",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -110,9 +198,9 @@
 }]]></component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
-      <recent name="$PROJECT_DIR$/src/main/webapp/Design" />
       <recent name="$PROJECT_DIR$/src/main/webapp/image" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/Design" />
+      <recent name="$PROJECT_DIR$/src/main/webapp/css" />
     </key>
   </component>
   <component name="RunManager">
@@ -171,7 +259,8 @@
       <workItem from="1698846568542" duration="12404000" />
       <workItem from="1699257059352" duration="1439000" />
       <workItem from="1699904640102" duration="1750000" />
-      <workItem from="1700371340247" duration="59488000" />
+      <workItem from="1700371340247" duration="65136000" />
+      <workItem from="1700654745733" duration="17912000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />

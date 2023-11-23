@@ -31,4 +31,7 @@
         <param-name>EMAIL_SMTP</param-name>
         <param-value>smtp.gmail.com</param-value>
     </context-param>
+    <welcome-file-list>
+        <welcome-file>main.jsp</welcome-file>
+    </welcome-file-list>
 </web-app>

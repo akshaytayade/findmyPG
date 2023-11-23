@@ -4,36 +4,51 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>findmyPG</title>
+    <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="/Design/boxicons-2.1.4/css/boxicons.min.css">
+    <link rel="preconnect" href="/Design/fonts/Poppins-Bold.ttf">
+    <link rel="preconnect" href="/Design/fonts/Poppins-SemiBold.ttf">
     <style>
         body {
-            margin: 0;
+            margin: 10px;
+            top: 100px;
+            position: absolute;
             padding: 0;
             font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
             background-color: #f4f4f4;
             color: #333;
-        }
-
-        h3 {
-            color: #333;
+            min-height: 100vh;
+            overflow-y: auto; /* Enable vertical scrolling if content exceeds viewport height */
         }
 
         form {
-            max-width: 600px;
+            max-width: 1200px;
             margin: 50px auto;
             padding: 20px;
             background-color: #fff;
             border-radius: 5px;
             box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
         }
 
         fieldset {
-            border: none;
+            flex: 0 0 48%;
             margin-bottom: 20px;
+            border: none; /* Remove the border */
+        }
+
+        /* Adjusted the flex property for the amenities fieldset */
+        fieldset.legend-amenities {
+            flex: 0 0 100%;
         }
 
         input[type="text"],
-        input[type="file"] {
-            width: 100%;
+        input[type="file"],
+        select {
+            width: calc(100% - 20px);
             padding: 10px;
             margin-bottom: 10px;
             border: 1px solid #ccc;
@@ -61,20 +76,6 @@
             font-weight: bold;
         }
 
-        select {
-            width: 100%;
-            padding: 10px;
-            margin-bottom: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            box-sizing: border-box;
-        }
-
-        legend {
-            font-weight: bold;
-            color: #333;
-        }
-
         input[type="checkbox"] {
             margin-right: 5px;
         }
@@ -83,7 +84,16 @@
 </head>
 
 <body>
-<h3>File Upload:</h3>
+
+<header>
+    <a href="#" class="logo">findmy<span class="span">PG</span></a>
+    <ul class="navlist">
+        <li><a href="main.jsp">Home</a></li>
+        <li><a href="index.jsp">Logout</a></li>
+        <li><a href="ownerPanel.jsp">Owner Panel</a></li>
+    </ul>
+</header>
+
 <form action="UploadServlet" method="post" enctype="multipart/form-data">
     <!-- Basic Details -->
     <fieldset>
@@ -104,13 +114,13 @@
     </fieldset>
 
     <!-- Amenities Provided -->
-    <fieldset>
+    <fieldset class="legend-amenities">
         <legend>Amenities:</legend>
-        <input type="checkbox" name="cleaning" value="cleaning" /> Cleaning Services
-        <input type="checkbox" name="fridge" value="fridge" /> Fridge
-        <input type="checkbox" name="ac" value="ac"/> Air Conditioning
-        <input type="checkbox" name="furnishing" value="furnishing" /> Furnishing
-        <input type="checkbox" name="food" value="food"/> Food
+        <input type="checkbox" name="amenities" value="cleaning" /> Cleaning Services
+        <input type="checkbox" name="amenities" value="fridge" /> Fridge
+        <input type="checkbox" name="amenities" value="ac"/> Air Conditioning
+        <input type="checkbox" name="amenities" value="furnishing" /> Furnishing
+        <input type="checkbox" name="amenities" value="food"/> Food
     </fieldset>
 
     <!-- Sharing type -->
@@ -124,19 +134,21 @@
     </fieldset>
 
     <!-- Image Uploading -->
-    <br>
-    <br>
-    <label for="file">Upload Property images:</label>
-    <input type="file" name="file" accept="image/*" multiple/>
+    <fieldset>
+        <label for="file">Upload Property images:</label>
+        <input type="file" name="file" accept="image/*" multiple/>
+    </fieldset>
 
-    <label for="owner_name">Owner Name:</label>
-    <input type="text" name="owner_name">
+    <fieldset>
+        <label for="owner_name">Owner Name:</label>
+        <input type="text" name="owner_name">
 
-    <label for="owner_contact">Owner Contact:</label>
-    <input type="text" name="owner_contact">
+        <label for="owner_contact">Owner Contact:</label>
+        <input type="text" name="owner_contact">
 
-    <input type="submit" value="Post Property" />
+        <input type="submit" value="Post Property" />
+    </fieldset>
 </form>
-</body>
 
+</body>
 </html>

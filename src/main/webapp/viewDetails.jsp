@@ -6,7 +6,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>View Details | findmyPG</title>
+    <title>findmyPG | Login</title>
+    <!-- Homepage link css -->
+    <link rel="stylesheet" type="text/css" href="css/viewDetails.css">
+    <link rel="stylesheet" href="Design/boxicons-2.1.4/css/boxicons.min.css">
+    <link rel="preconnect" href="Design/fonts/Poppins-Bold.ttf">
+    <link rel="preconnect" href="Design/fonts/Poppins-SemiBold.ttf">
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -31,7 +36,17 @@
     </style>
 </head>
 <body>
-
+<header>
+    <a href="#" class="logo">findmy<span class="span">PG</span></a>
+    <ul class="navlist">
+        <li><a href="main.jsp"class="active">Home</a></li>
+        <li><a href="login.jsp">Login</a></li>
+        <li><a href="signup.jsp">Signup</a></li>
+        <!-- <li><a href="/html/admin.html">Admin Login</a></li>-->
+        <li><a href="about_us.html">About Us</a></li>
+        <li><a href="main.jsp">Logout</a></li>
+    </ul>
+</header>
 <%
     ServletContext sc = request.getServletContext();
 
@@ -61,19 +76,22 @@
         if (resultSet.next()) {
 %>
 
-<div class="property">
+<div class="container">
+
     <p><strong>Property Name:</strong> <%= resultSet.getString("pname") %></p>
     <p><strong>Address:</strong> <%= resultSet.getString("address") %></p>
     <p><strong>Pincode:</strong> <%= resultSet.getString("pincode") %></p>
     <p><strong>Owner Name:</strong> <%= resultSet.getString("name") %></p>
     <p><strong>Owner Contact:</strong> <%= resultSet.getString("contact") %></p>
-    <form action="SendEmailServlet" method="post">
-        <input type="hidden" name="pname" value="<%= resultSet.getString("pname") %>">
-        <input type="hidden" name="owner_name" value="<%= resultSet.getString("name") %>">
-        <input type="hidden" name="owner_contact" value="<%= resultSet.getString("contact") %>">
-        <input type="hidden" name="address" value="<%= resultSet.getString("address") %>">
-        <input type="email" name="user_email">
-        <input type="submit" value="Send Details via Email">
+    <form action="SendEmailServlet" method="post" class="form">
+        <div class="animated-input">
+            <input type="hidden" name="pname" value="<%= resultSet.getString("pname") %>">
+            <input type="hidden" name="owner_name" value="<%= resultSet.getString("name") %>">
+            <input type="hidden" name="owner_contact" value="<%= resultSet.getString("contact") %>">
+            <input type="hidden" name="address" value="<%= resultSet.getString("address") %>">
+            <input type="email" name="user_email" placeholder="Enter Email Here">
+            <div class="animated-input">
+                <input type="submit" value="Get Details" class="btn">
     </form>
 </div>
 
