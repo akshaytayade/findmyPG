@@ -43,45 +43,46 @@
     </div>
 
 
-<%--  </div><div class="column">--%>
-<%--  <div class="card">--%>
-<%--    <img src="/image/about2.jpg" alt="Jane" width="232px" height="233px">--%>
-<%--    <div class="container">--%>
-<%--      <h2>Amar Kale</h2>--%>
-<%--      <p class="title">CEO & Founder</p>--%>
+    <%--  </div><div class="column">--%>
+    <%--  <div class="card">--%>
+    <%--    <img src="/image/about2.jpg" alt="Jane" width="232px" height="233px">--%>
+    <%--    <div class="container">--%>
+    <%--      <h2>Amar Kale</h2>--%>
+    <%--      <p class="title">CEO & Founder</p>--%>
 
-<%--      <p>amarrkale44@gmail.com</p>--%>
-<%--      <p><button class="button">Contact</button></p>--%>
-<%--    </div>--%>
-<%--  </div>--%>
-<%--</div>--%>
+    <%--      <p>amarrkale44@gmail.com</p>--%>
+    <%--      <p><button class="button">Contact</button></p>--%>
+    <%--    </div>--%>
+    <%--  </div>--%>
+    <%--</div>--%>
 
-<%--  <div class="column">--%>
-<%--    <div class="card">--%>
-<%--      <img src="/image/about3.jpeg" alt="Mike" width="232px" height="233px">--%>
-<%--      <div class="container">--%>
-<%--        <h2>Mike Ross</h2>--%>
-<%--        <p class="title">Art Director</p>--%>
+    <%--  <div class="column">--%>
+    <%--    <div class="card">--%>
+    <%--      <img src="/image/about3.jpeg" alt="Mike" width="232px" height="233px">--%>
+    <%--      <div class="container">--%>
+    <%--        <h2>Mike Ross</h2>--%>
+    <%--        <p class="title">Art Director</p>--%>
 
-<%--        <p>mike@example.com</p>--%>
-<%--        <p><button class="button">Contact</button></p>--%>
-<%--      </div>--%>
-<%--    </div>--%>
-<%--  </div> --%>
+    <%--        <p>mike@example.com</p>--%>
+    <%--        <p><button class="button">Contact</button></p>--%>
+    <%--      </div>--%>
+    <%--    </div>--%>
+    <%--  </div> --%>
 
 
-<%--  <div class="column">--%>
-<%--    <div class="card">--%>
-<%--      <img src="/w3images/team3.jpg" alt="John" style="width:100%">--%>
-<%--      <div class="container">--%>
-<%--        <h2>John Doe</h2>--%>
-<%--        <p class="title">Designer</p>--%>
-<%--        <p>Some text that describes me lorem ipsum ipsum lorem.</p>--%>
-<%--        <p>john@example.com</p>--%>
-<%--        <p><button class="button">Contact</button></p>--%>
-<%--      </div>--%>
-<%--    </div>--%>
-<%--  </div>--%>
+    <%--  <div class="column">--%>
+    <%--    <div class="card">--%>
+    <%--      <img src="/w3images/team3.jpg" alt="John" style="width:100%">--%>
+    <%--      <div class="container">--%>
+    <%--        <h2>John Doe</h2>--%>
+    <%--        <p class="title">Designer</p>--%>
+    <%--        <p>Some text that describes me lorem ipsum ipsum lorem.</p>--%>
+    <%--        <p>john@example.com</p>--%>
+    <%--        <p><button class="button">Contact</button></p>--%>
+    <%--      </div>--%>
+    <%--    </div>--%>
+    <%--  </div>--%>
+  </div>
 </div>
 </body>
 </html>

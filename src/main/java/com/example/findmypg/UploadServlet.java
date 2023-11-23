@@ -52,7 +52,7 @@ public class UploadServlet extends HttpServlet {
             uploadDir.mkdir();
         }
         ArrayList<String> imgName = new ArrayList<String>();
-        List<Part> fileParts = request.getParts().stream().filter(part -> "files".equals(part.getName()) && part.getSize() > 0).collect(Collectors.toList()); // Retrieves <input type="file" name="files" multiple="true">
+        List<Part> fileParts = request.getParts().stream().filter(part -> "file".equals(part.getName()) && part.getSize() > 0).collect(Collectors.toList()); // Retrieves <input type="file" name="files" multiple="true">
         for (Part filePart : fileParts) {
             String fileName = Paths.get(filePart.getSubmittedFileName()).getFileName().toString();// MSIE fix.
             imgName.add(fileName);
@@ -95,15 +95,15 @@ public class UploadServlet extends HttpServlet {
             conn.close();
 
             //Sending data to ownerPanel.jsp
-            String destination = "ownerPanel.jsp";
-            RequestDispatcher requestDispatcher = request.getRequestDispatcher(destination);
-            request.setAttribute("owner_name", owner_name);
-            requestDispatcher.forward(request, response);
+//            String destination = "ownerPanel.jsp";
+//            RequestDispatcher requestDispatcher = request.getRequestDispatcher(destination);
+//            request.setAttribute("owner_name", owner_name);
+//            requestDispatcher.forward(request, response);
 
             //Validating if the query has been executed or not
             if (rowsAffected > 0){
                 System.out.println(rowsAffected+" records inserted");
-
+                response.sendRedirect("home.jsp");
             }
             else {
                 out.println(stmt);

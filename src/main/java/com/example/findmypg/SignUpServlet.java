@@ -28,7 +28,7 @@ public class SignUpServlet extends HttpServlet {
         //Fetching fields from Form
         String name = request.getParameter("name");
         String pass = request.getParameter("password");
-        Integer contact = Integer.valueOf(request.getParameter("phoneno"));
+        String contact = request.getParameter("phoneno");
         String email = request.getParameter("email");
         String location = request.getParameter("location");
         String user_role = request.getParameter("user_role");
@@ -38,42 +38,44 @@ public class SignUpServlet extends HttpServlet {
         boolean isPasswordValid = isPasswordValid(pass);
         if (isPasswordValid) {
 //            out.println("Password is valid.");
-        } else {
-            out.println("Password is not valid.");
-        }
-        //DB Connection
-        ServletContext sc = request.getServletContext();
-        String DB_DRIVER = sc.getInitParameter("DB_DRIVER");
-        String DB_URL = sc.getInitParameter("DB_URL");
-        String DB_USER = sc.getInitParameter("DB_USER");
-        String DB_PASS = sc.getInitParameter("DB_PASS");
+            ServletContext sc = request.getServletContext();
+            String DB_DRIVER = sc.getInitParameter("DB_DRIVER");
+            String DB_URL = sc.getInitParameter("DB_URL");
+            String DB_USER = sc.getInitParameter("DB_USER");
+            String DB_PASS = sc.getInitParameter("DB_PASS");
 
-        try {
-            Class.forName(DB_DRIVER);
-            Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
-            PreparedStatement stmt = conn.prepareStatement("insert into user_master (name,pass,contact,user_email,user_role) values (?,?,?,?,?)");
-            stmt.setString(1, name);
-            stmt.setString(2, pass);
-            stmt.setInt(3, contact);
-            stmt.setString(4,email);
-            stmt.setString(5,user_role);
+            try {
+                Class.forName(DB_DRIVER);
+                Connection conn = DriverManager.getConnection(DB_URL, DB_USER, DB_PASS);
+                PreparedStatement stmt = conn.prepareStatement("insert into user_master (name,pass,contact,user_email,user_role) values (?,?,?,?,?)");
+                stmt.setString(1, name);
+                stmt.setString(2, pass);
+                stmt.setString(3, contact);
+                stmt.setString(4,email);
+                stmt.setString(5,user_role);
 //            out.println(stmt);
 
-            //Executing the Query
-            int rowsAffected = stmt.executeUpdate();
-            conn.close();
+                //Executing the Query
+                int rowsAffected = stmt.executeUpdate();
+                conn.close();
 
-            //Validating if the query has been executed or not
-            if (rowsAffected > 0){
-                out.println("User has been created");
-            }
-            else {
-                out.println(stmt);
-                out.println("Something went wrong...");
+                //Validating if the query has been executed or not
+                if (rowsAffected > 0){
+                    System.out.println("User has been created");
+                    response.sendRedirect("index.jsp");
+                }
+                else {
+                    out.println(stmt);
+                    out.println("Something went wrong...");
+                }
+
+            } catch (Exception e) {
+                System.out.println(e);
             }
 
-        } catch (Exception e) {
-            System.out.println(e);
+        } else {
+            response.sendRedirect("signup.jsp");
+            out.println("Password is not valid.");
         }
     }
 

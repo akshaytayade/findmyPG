@@ -35,7 +35,7 @@ public class SendEmailServlet extends HttpServlet {
         String address = request.getParameter("address");
         System.out.println(address);
 
-        String owner_name = request.getParameter("name");
+        String owner_name = request.getParameter("owner_name");
         System.out.println(owner_name);
 
         String owner_contact = request.getParameter("owner_contact");

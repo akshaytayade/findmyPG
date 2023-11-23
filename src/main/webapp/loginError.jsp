@@ -4,8 +4,8 @@
     <title>findmyPG | Error</title>
 </head>
 <body>
-  <h3>Login failed!</h3>
-  <h3>Please try again</h3>
-  <a href="index.jsp" />
+<h3>Login failed!</h3>
+<h3>Please try again</h3>
+<a href="index.jsp" />
 </body>
 </html>
